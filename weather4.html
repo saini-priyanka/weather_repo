@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather4.css" />
+</head>
+
+<body>
+  <div class="weather-app">
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="getWeather()">Search</button>
+    </div>
+    <h3 id="datetime">Date & Time</h3>
+    <p id="condition">Condition</p>
+
+    <div class="container">
+      <div class="current-weather">
+        <h2 id="city">city</h2>
+        <h1 id="temp">--°C</h1>
+      </div>
+
+      <div class="condition-content">
+        <p>feelslike <span id="feelslike"> --°C</span></p>
+        <p>Humidity <span id="humidity">--%</span></p>
+        <p>Wind <span id="wind">-- km/h</span></p>
+      </div>
+    </div>
+
+    <h3>Weekly Forecast</h3>
+    <div class="forecast weekly-forecast" id="weeklyForecast"></div>
+
+    <h3>Hourly Forecast</h3>
+    <div class="forecast hourly-forecast" id="hourlyForecast"></div>
+  </div>
+
+  <script src="weather4.js"></script>
+</body>
+
+</html>

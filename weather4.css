@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.weather-app {
+  max-width: 1300px;
+  max-height: 1300px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  text-align: right;
+  padding: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 20%;
+  font-size: 1em;
+}
+
+.search-bar button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.current-weather,
+.condition-weather {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+}
+
+.forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #333;
+}
+
+.forecast::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 10px;
+}
+
+.forecast::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.forecast .forecast-card {
+  background: #3a3a5a;
+  min-width: 120px;
+  padding: 15px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.weather-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.small-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px
+}
+
+/* ===== Responsive Media Queries ===== */
+
+/* iPad / Tablet Portrait */
+@media screen and (max-width: 768px) {
+  .search-bar input {
+    width: 60%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .condition-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* iPhone SE / Small Mobile */
+@media screen and (max-width: 480px) {
+  .search-bar input {
+    width: 70%;
+  }
+
+  .forecast .forecast-card {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .small-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
